@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pixel Art Editor</h1>
+
+        <!-- Grid Size Control -->
+        <div class="grid-size-control">
+            <label for="gridSize">Grid Size: <span id="gridSizeValue">16</span> x <span id="gridSizeValue">16</span></label>
+            <input type="range" id="gridSize" min="8" max="64" value="16" step="2">
+        </div>
+
+        <!-- Color Palette -->
+        <div class="color-palette" id="colorPalette">
+            <button class="color-option" style="background: #ff5733;" data-color="#ff5733"></button>
+            <button class="color-option" style="background: #3498db;" data-color="#3498db"></button>
+            <button class="color-option" style="background: #2ecc71;" data-color="#2ecc71"></button>
+            <button class="color-option" style="background: #f1c40f;" data-color="#f1c40f"></button>
+            <button class="color-option" style="background: #9b59b6;" data-color="#9b59b6"></button>
+        </div>
+
+        <!-- Custom Color -->
+        <div class="add-color">
+            <input type="text" id="hexColor" placeholder="Enter HEX">
+            <button id="addColor">Add</button>
+        </div>
+
+        <button id="clearButton">Clear</button>
+
+        <!-- Drawing Grid -->
+        <div class="grid" id="grid"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
